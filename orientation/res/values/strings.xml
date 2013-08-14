@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">orientation</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_section1">Schedule</string>
+    <string name="title_section2">Map</string>
+    <string name="title_section3">People</string>
+    <string name="title_section4">FAQ</string>
+
+</resources>
