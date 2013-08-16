@@ -1,5 +1,9 @@
 package com.sap.orientation;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Locale;
 
 
@@ -7,6 +11,7 @@ import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -64,7 +69,22 @@ public class ScheduleActivity extends FragmentActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
         
        
-
+        System.out.println("got here");
+        try {
+			Event firstEvent = getFirstEvent();
+			System.out.println(firstEvent.date);
+			System.out.println(firstEvent.time);
+			System.out.println(firstEvent.title);
+			System.out.println(firstEvent.room);
+			System.out.println(firstEvent.presenters);
+			System.out.println(firstEvent.descr);
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
     }
 
     @Override
@@ -140,11 +160,80 @@ public class ScheduleActivity extends FragmentActivity {
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_schedule_dummy, container, false);
             TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
-            dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+            //dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+            dummyTextView.setText("hello");
             return rootView;
         }
     }
 
 
+    
+    public Event getFirstEvent() throws IOException{
+    	
+    	AssetManager assetMgr = getAssets();
+    	InputStream file = assetMgr.open("schedule.txt");
+		
+    	Event event = new Event();
+    	
+    	BufferedReader input = new BufferedReader(new InputStreamReader(file));
+    	
+    	// Read date
+        try {
+            event.date = input.readLine();
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+           // return "Error reading File!";
+        }
+    	
+     // Read time
+        try {
+            event.time = input.readLine();
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+           // return "Error reading File!";
+        }
+    	
+        // Read title
+        try {
+            event.title = input.readLine();
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+           // return "Error reading File!";
+        }
+    	
+        // Read room
+        try {
+            event.room = input.readLine();
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+           // return "Error reading File!";
+        }
+        
+        // Read presenters
+        try {
+            event.presenters = input.readLine();
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+           // return "Error reading File!";
+        }
+        
+        // Read description
+        try {
+            event.descr = input.readLine();
+        
+        } catch (IOException e) {
+            e.printStackTrace();
+           // return "Error reading File!";
+        }
+        
+      return event;  
+      
+    }
+    
 
 }
