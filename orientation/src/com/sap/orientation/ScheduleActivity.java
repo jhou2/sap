@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Locale;
 
 
@@ -67,11 +68,22 @@ public class ScheduleActivity extends FragmentActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        
+   
        
-        System.out.println("got here");
-        try {
-			Event firstEvent = getFirstEvent();
+        
+        // Grab schedule data
+        AssetManager assetMgr = getAssets();
+    	InputStream file;
+		
+    	try {
+			file = assetMgr.open("schedule.txt");
+			Schedule scheduleManager = new Schedule();
+			scheduleManager.populateSchedule(file); // Returns an arraylist of Events
+			
+			ArrayList<Event> schedule = scheduleManager.getSchedule();
+		
+			Event firstEvent = schedule.get(25);
+      
 			System.out.println(firstEvent.date);
 			System.out.println(firstEvent.time);
 			System.out.println(firstEvent.title);
@@ -79,14 +91,16 @@ public class ScheduleActivity extends FragmentActivity {
 			System.out.println(firstEvent.presenters);
 			System.out.println(firstEvent.descr);
 			
-			
+			file.close();
+    	
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        
+   
     }
 
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -162,78 +176,12 @@ public class ScheduleActivity extends FragmentActivity {
             TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
             //dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
             dummyTextView.setText("hello");
+            dummyTextView.setText("world");
             return rootView;
         }
     }
 
 
-    
-    public Event getFirstEvent() throws IOException{
-    	
-    	AssetManager assetMgr = getAssets();
-    	InputStream file = assetMgr.open("schedule.txt");
-		
-    	Event event = new Event();
-    	
-    	BufferedReader input = new BufferedReader(new InputStreamReader(file));
-    	
-    	// Read date
-        try {
-            event.date = input.readLine();
-        
-        } catch (IOException e) {
-            e.printStackTrace();
-           // return "Error reading File!";
-        }
-    	
-     // Read time
-        try {
-            event.time = input.readLine();
-        
-        } catch (IOException e) {
-            e.printStackTrace();
-           // return "Error reading File!";
-        }
-    	
-        // Read title
-        try {
-            event.title = input.readLine();
-        
-        } catch (IOException e) {
-            e.printStackTrace();
-           // return "Error reading File!";
-        }
-    	
-        // Read room
-        try {
-            event.room = input.readLine();
-        
-        } catch (IOException e) {
-            e.printStackTrace();
-           // return "Error reading File!";
-        }
-        
-        // Read presenters
-        try {
-            event.presenters = input.readLine();
-        
-        } catch (IOException e) {
-            e.printStackTrace();
-           // return "Error reading File!";
-        }
-        
-        // Read description
-        try {
-            event.descr = input.readLine();
-        
-        } catch (IOException e) {
-            e.printStackTrace();
-           // return "Error reading File!";
-        }
-        
-      return event;  
-      
-    }
     
 
 }
