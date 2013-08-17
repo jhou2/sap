@@ -81,22 +81,24 @@ public class ScheduleActivity extends FragmentActivity {
 			scheduleManager.populateSchedule(file); // Returns an arraylist of Events
 			
 			ArrayList<Event> schedule = scheduleManager.getSchedule();
-		
-			Event firstEvent = schedule.get(25);
-      
-			System.out.println(firstEvent.date);
-			System.out.println(firstEvent.time);
-			System.out.println(firstEvent.title);
-			System.out.println(firstEvent.room);
-			System.out.println(firstEvent.presenters);
-			System.out.println(firstEvent.descr);
 			
-			file.close();
-    	
+			// Test all events were created properly
+			for (Event e: schedule){
+				
+				System.out.println(e.date);
+				System.out.println(e.time);
+				System.out.println(e.title);
+				System.out.println(e.room);
+				System.out.println(e.presenters);
+				System.out.println(e.descr);
+			}
+			
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
    
     }
 
