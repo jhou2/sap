@@ -40,10 +40,14 @@ public class Schedule {
 				line = input.readLine(); // Reads the next line (date, if there is another event)
 			} // End while
 			
+			input.close();
+		
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
+		
 	 
 	}
 	

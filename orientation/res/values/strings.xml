@@ -7,5 +7,6 @@
     <string name="title_section2">Map</string>
     <string name="title_section3">People</string>
     <string name="title_section4">FAQ</string>
-
+    <string name="imageview1_description">Third Floor Map</string>
+    
 </resources>
