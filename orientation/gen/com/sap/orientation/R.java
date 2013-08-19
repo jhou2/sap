@@ -25,20 +25,22 @@ public final class R {
         public static final int map=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
+        public static final int action_settings=0x7f080007;
         public static final int imageView1=0x7f080003;
         public static final int list_faq=0x7f080002;
         public static final int list_people=0x7f080004;
         public static final int pager=0x7f080000;
         public static final int pager_title_strip=0x7f080001;
-        public static final int section_label=0x7f080005;
+        public static final int schedule_expandable=0x7f080005;
+        public static final int section_label=0x7f080006;
     }
     public static final class layout {
         public static final int activity_schedule=0x7f030000;
         public static final int fragment_faq=0x7f030001;
         public static final int fragment_map=0x7f030002;
         public static final int fragment_people=0x7f030003;
-        public static final int fragment_schedule_dummy=0x7f030004;
+        public static final int fragment_schedule=0x7f030004;
+        public static final int fragment_schedule_dummy=0x7f030005;
     }
     public static final class menu {
         public static final int schedule=0x7f070000;
