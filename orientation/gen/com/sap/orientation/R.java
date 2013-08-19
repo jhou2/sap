@@ -28,9 +28,9 @@ public final class R {
         public static final int action_settings=0x7f080007;
         public static final int imageView1=0x7f080003;
         public static final int list_faq=0x7f080002;
-        public static final int list_people=0x7f080004;
         public static final int pager=0x7f080000;
         public static final int pager_title_strip=0x7f080001;
+        public static final int people_expandable=0x7f080004;
         public static final int schedule_expandable=0x7f080005;
         public static final int section_label=0x7f080006;
     }
