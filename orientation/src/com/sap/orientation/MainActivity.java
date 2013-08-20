@@ -34,8 +34,6 @@ public class MainActivity extends FragmentActivity {
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
 
-	private static ImageView image1;
-
 	// Set up the action bar.
 
 	// Specify that the Home/Up button should not be enabled, since there is no
@@ -64,8 +62,6 @@ public class MainActivity extends FragmentActivity {
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
-
-		// Grab schedule data
 
 	}
 
@@ -97,34 +93,34 @@ public class MainActivity extends FragmentActivity {
 			switch (position) {
 			case 0:
 				fragment = new ScheduleSectionFragment();
-				args.putInt(ScheduleSectionFragment.ARG_SECTION_NUMBER,
-						position + 1);
+				// Not sure if we want to feed in the schedule.txt here, or within the fragment itself
+				// Might implement adding an argument for this, instead of having it in the fragment
 				fragment.setArguments(args);
-				return fragment;
+				break;
 			case 1:
 				fragment = new MapSectionFragment();
 				args.putInt(MapSectionFragment.ARG_SECTION_NUMBER, position + 1);
 				fragment.setArguments(args);
-				return fragment;
-
+				break;
 			case 2:
 				fragment = new PeopleSectionFragment();
 				args.putInt(PeopleSectionFragment.ARG_SECTION_NUMBER,
 						position + 1);
 				fragment.setArguments(args);
-				return fragment;
-
+				break;
 			case 3:
 				fragment = new FAQSectionFragment();
 				args.putInt(FAQSectionFragment.ARG_SECTION_NUMBER, position + 1);
 				fragment.setArguments(args);
-				return fragment;
+				break;
+			default:
+				fragment = new DummySectionFragment();
+				args = new Bundle();
+				args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+				fragment.setArguments(args);
+				break;
 			}
 
-			fragment = new DummySectionFragment();
-			args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args);
 			return fragment;
 		}
 
@@ -179,116 +175,5 @@ public class MainActivity extends FragmentActivity {
 		}
 	} // end DummySectionFragment
 
-	public static class ScheduleSectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public ScheduleSectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_schedule_dummy,
-					container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView
-					.setText("Tuesday Sept 3, 2013 \n8:30-9:00AM \n"
-							+ "Welcome & Ice Breaker Session\nGalileo Room\n"
-							+ "Rajdeep Randhawa, Jaismin Parmar, Carrie Cheung, Chelsea Lee\n"
-							+ "Welcome to SAP! Get to know your fellow interns with an " +
-							"interactive ice breaker to jumpstart the day.\n"
-							+ "\n" + "9:00-11:00AM\n"
-							+ "New Employee Welcome Session\n" + "Galileo Room\n"
-							+ "Agnes Garaba" + "\n");
-
-			return rootView;
-		}
-
-	} // end ScheduleSectionFragment
-
-	public static class PeopleSectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public PeopleSectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_people,
-					container, false);
-			TextView dummyTextView = (TextView)
-			rootView.findViewById(R.id.list_people);
-			dummyTextView.setText("Kirsten Sutton\n" +
-			"Managing Director, SAP Labs Canada\n\n" +
-					"Cho Wang\n" +
-			"Solution Management Intern\n\n" +
-					"Agnes Garaba\n" +
-			"HR Business Partner\n"
-			);
-
-			return rootView;
-		}
-
-	} // end PeopleSectionFragment
-
-	public static class MapSectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public MapSectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-
-			View rootView = inflater.inflate(R.layout.fragment_map, container,
-					false);
-			image1 = (ImageView) rootView.findViewById(R.id.imageView1);
-			image1.setImageResource(R.drawable.map);
-
-			return rootView;
-		}
-
-	} // end MapSectionFragment
-
-	public static class FAQSectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public FAQSectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_faq, container,
-					false);
-			TextView dummyTextView = (TextView)
-			rootView.findViewById(R.id.list_faq);
-			dummyTextView.setText("When do I get paid?\n\n" +
-			"You are paid on the 15th and last day of each month.\n\n" +
-					"What's my I-number?\n\n");
-
-			return rootView;
-		}
-
-	} // end FAQSectionFragment
-
+	// @Will: I moved all the subclass fragments into their own classes (ScheduleSectionFragment.java,MapSectionFragment.java,etc..)
 }

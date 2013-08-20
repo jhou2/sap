@@ -23,4 +23,11 @@ public class Event {
 		descr = pDescr;
 	}
 	
+	public String getDate(){return date;}
+	public String getTime(){return time;}
+	public String getTitle(){return title;}
+	public String getRoom(){return room;}
+	public String getPresenters(){return presenters;}
+	public String getDescription(){return descr;}
+	
 }
