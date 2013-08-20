@@ -9,13 +9,13 @@ Tuesday Sept 3, 2013
 New Employee Welcome Session
 Galileo
 Agnes Garaba
-description
+Welcome to SAP Vancouver!
 Tuesday Sept 3, 2013
 11:00-11:30AM
 Presentation by Facilities
 Galileo
 Bonnie Potratz
-description
+Security, housekeeping, maintenance all fall under Facilities.  What do you do if you forget your security pass?
 Tuesday Sept 3, 2013
 11:30AM-12:00PM
 Coop IT Orientation
@@ -33,7 +33,7 @@ Tuesday Sept 3, 2013
 Vancouver Office Site Tour
 Galileo
 Sneha Nambiar, Rajdeep Randhawa, Jaismin Parmar, Cindy Tang, Carrie Cheung, Ross Papa, Chelsea Lee
-Where’s the closest kitchen? How do I get to the company gym? No need to panic—learn the in’s and out’s of the office with tours led by interns who’ve had the same questions as you.
+Where's the closest kitchen? How do I get to the company gym? No need to panic! Learn the in's and out's of the office with tours led by interns who’ve had the same questions as you.
 Wednesday Sept 4, 2013
 1:30-2:00PM
 Welcome & Training Schedule
@@ -42,16 +42,16 @@ Michael Leetime
 description
 Wednesday Sept 4, 2013
 2:00-2:30PM
-Introduction to TIP (Technology Innovation Platform) Grou
+Introduction to Product & Innovation (PI) Group
 Galileo
 Michael Lee
-description
+The Director of Engineering in SAP Vancouver explains what the PI group is and what we do.
 Wednesday Sept 4, 2013
 2:45-4:15PM
 Increase Your Networking IQ
 Galileo
 Darriel Dawne
-description
+Everyone tells you that you should network.  But how do you do it?  This session teaches you the fundamentals of networking.  
 Thursday Sept 5, 2013
 11:00AM-1:00PM
 Optional (Dutch) Lunch: Have lunch & meet other coops/interns
@@ -63,37 +63,37 @@ Thursday Sept 5, 2013
 Testing Software
 Galileo
 Clint Sello
-description
+How SAP tests software. Its more complicated than it looks.
 Thursday Sept 5, 2013
 2:15-3:15PM
 How Do We Build Software?
 Galileo
 Peter Tippett
-description
+How do the different team members interact in a scrum?  How does it all work together?  Learn about it from Peter.
 Friday Sept 6, 2013
 2:30-3:00PMPM
 How to Write Code
 Galileo
-David Simpso
-description
+David Simpson
+A high-level discussion on how SAP Vancouver develops code.
 Friday Sept 6, 2013
 3:00-3:30PM
 Introduction to BI Portfolio Product Management
 Galileo
 Zach Hulbert
-description
+Learn about product management: What it is and why we need it.
 Monday Sept 9, 2013
 1:30-2:20PM
 Presentation by Recruiting
 Galileo
 Agnes Block
-description
+Congratulations, you got into SAP!  Now what?
 Monday Sept 9, 2013
 2:30-3:30PM
 Value Engineer for Sales / Whiteboard Session - What SAP Sells
 Galileo
 Shane Finlay
-description
+Learn how value engineering helps our customers run better.
 Monday Sept 9, 2013
 3:45-4:30PM
 Presentation by Vancouver Intern Committee
@@ -102,61 +102,61 @@ Jaismin Parmar, Carrie Cheung, Ross Papa, Chelsea Lee
 Learn what the Intern Committee is all about, and put your SAP knowledge to the test with a round of SAP-inspired Jeopardy!
 Tuesday Sept 10, 2013
 1:30-2:30PM
-TIP (Technology Innovation Platform) Infrastructure
+Product & Innovation (PI) Infrastructure
 Galileo
 Ryan Wong
-description
+Need a HANA instance?  Or a VM?  Learn more about how the Infrastructure team can help you!
 Tuesday Sept 10, 2013
 2:45-3:45PM
-BI in TIP (Technology Innovation Platform)
+BI in Product & Innovation (PI)
 Galileo
 Nazpar Yazdanfar
-description
+Learn how to use our own business intelligence and analytics software with the development of our own products!
 Wednesday Sept 11, 2013
 1:30-2:30PM
 User Experience & Accessibility
 Galileo
 Ed Prinsen & Zach Hulbert
-description
+Find out what SAP is working on with UX & accessible user interfaces.
 Wednesday Sept 11, 2013
 2:45-3:45PM
-Presentation by Community & Green Teamse
+Presentation by Community & Green Teams
 Galileo
 Niti Nielsen
-description
+SAP Vancouver is a leader in sustainability and green initiatives.  Learn more from Niti and join the Green Team!
 Thursday Sept 12, 2013
 1:30-2:30PM
 Intellectual Property
 Galileo
 Rob Chee
-description
+What is Intellectual Property and how does it affect your work at SAP?  Learn more about patents and how you can add value to SAP's IP!
 Thursday Sept 12, 2013
 2:45-3:45PM
 Using 3rd Party Code
 Galileo
 Justine Shan
-description
+Can you use open source code at SAP?  What are the different software licenses out there?  Learn about how Global Technology Legal Compliance can help you develop legally compliant products.
 Friday Sept 13, 2013
 1:30-2:15PM
 Introduction to JIRA
 Galileo
 Kevin Huang
-description
+SAP uses JIRA Issue & Bug Tracker to plan, track, and work smarter and faster.
 Friday Sept 13, 2013
 2:30-3:30PM
 Introduction to Perforce
 Galileo
 Richard Yu & Margaret Chan
-description
+Perforce is the main version control software used in SAP. Get a brief introduction to how to use it!
 Tuesday Sept 17, 2013
 1:30-2:00PM
 Presentation by Wellness Team
 Galileo
 Penny Stratas & Cathy Lund
-description
+The Wellness Team promotes healthy lifestyles and activities in the workplace.
 Tuesday Sept 17, 2013
 2:00-2:30PM
 Executive Briefing Center (EBC) Tour
 Galileo
 Rachel Floyd
-description
+The EBC in Vancouver is one of eight in the world that is dedicated to articulating value and inspiring innovation for SAP's customers and partners. 
