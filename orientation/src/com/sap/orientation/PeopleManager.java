@@ -75,11 +75,7 @@ ArrayList<People> allPeople;
 			for (People person : allPeople){
 					
 				String bio = person.getBio();
-					
-				if(!bios.contains(bio)){
-						bios.add(bio);
-					
-				}
+				bios.add(bio);
 				
 			}
 				
