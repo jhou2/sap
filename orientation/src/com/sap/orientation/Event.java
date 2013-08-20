@@ -1,5 +1,8 @@
 package com.sap.orientation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Event {
 
 	String date;
@@ -29,5 +32,16 @@ public class Event {
 	public String getRoom(){return room;}
 	public String getPresenters(){return presenters;}
 	public String getDescription(){return descr;}
+	
+	public ArrayList<String> getArrayDetails(){
+		ArrayList<String> arrayDetails = new ArrayList<String>();
+		arrayDetails.add(getDate());
+		arrayDetails.add(getTime());
+		arrayDetails.add(getTitle());
+		arrayDetails.add(getRoom());
+		arrayDetails.add(getPresenters());
+		arrayDetails.add(getDescription());
+		return arrayDetails;
+	}
 	
 }

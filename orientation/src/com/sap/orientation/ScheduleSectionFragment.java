@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListAdapter;
@@ -69,7 +70,7 @@ public class ScheduleSectionFragment extends Fragment{
 		}
     	
     	expListAdapter = new ScheduleListAdapter(schedule);
-    	    	
+//    	expListAdapter = new ScheduleSubListAdapter(events.get(25));
 	}
 	
 	@Override
@@ -82,8 +83,12 @@ public class ScheduleSectionFragment extends Fragment{
     }
 	
 	
-	// An expandable list adapter that has the dates as the group views, and Events as the children
-	// Feed in a schedule, that will con
+	/**
+	 *  An expandable list adapter that has the dates as the group views, and Events as the children
+	 * @author I837203
+	 * Feed in a schedule, that will contain a list of events
+	 */
+	
 	public class ScheduleListAdapter extends BaseExpandableListAdapter{
 		private ArrayList<String> dates;
 		
@@ -140,12 +145,102 @@ public class ScheduleSectionFragment extends Fragment{
 		@Override
 		public View getChildView(int groupPosition, int childPosition,
 				boolean isLastChild, View convertView, ViewGroup parent) {
-			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
+//			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
+//			Event childEvent = (Event) getChild(groupPosition,childPosition);
+//			textView.setText(childEvent.getTime() + "    " + childEvent.getTitle());
+//			return textView;
+			
 			Event childEvent = (Event) getChild(groupPosition,childPosition);
-			textView.setText(childEvent.getTime() + "    " + childEvent.getTitle());
 			
+			ExpandableListView childView = new YourCustomExpandableListView(ScheduleSectionFragment.this.getActivity());
+			ExpandableListAdapter childViewAdapter = new ScheduleSubListAdapter(childEvent);
+			childView.setAdapter(childViewAdapter); 
+			return childView;			
+		}
+		@Override
+		public boolean hasStableIds() {
+			return true;
+		}
+
+		@Override
+		public boolean isChildSelectable(int groupPosition, int childPosition) {
+			return true;
+		}
+				
+	}
+	
+	/**
+	
+	 * ExpandableListAdapter for each event, that will expand out to have the individual descriptions
+	 * 
+	 * 
+	 * @author I837203
+	 *
+	 */
+	public class ScheduleSubListAdapter extends BaseExpandableListAdapter{
+		private ArrayList<Event> childEventArray;
+		
+		//private Map<String, ArrayList<Event>> mapEvents;
+
+		private ArrayList<String> childEventDetails;
+		
+		public ScheduleSubListAdapter(Event event) {
+			childEventArray = new ArrayList<Event>();
+			childEventArray.add(event);
 			
+			childEventDetails = new ArrayList<String>();
+			childEventDetails.add("Where: " + event.getRoom());
+			childEventDetails.add("Who: " + event.getPresenters());
+			childEventDetails.add("Desc: " + event.getDescription());
+		}
+
+		@Override
+		public Object getChild(int groupPosition, int childPosition) {
+			return childEventDetails.get(childPosition);
+		}
+
+		@Override
+		public long getChildId(int groupPosition, int childPosition) {
+			return childPosition;
+		}
+
+		@Override
+		public int getChildrenCount(int groupPosition) {
+			return childEventDetails.size();
+		}
+
+		@Override
+		public Object getGroup(int groupPosition) {
+			return childEventArray.get(groupPosition);
+		}
+
+		@Override
+		public int getGroupCount() {
+			return childEventArray.size();
+		}
+
+		@Override
+		public long getGroupId(int groupPosition) {
+			return groupPosition;
+		}
+
+		@Override
+		public View getGroupView(int groupPosition, boolean isExpanded,
+				View convertView, ViewGroup parent) {
+			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
+			Event childEvent = (Event) getGroup(groupPosition);
+			textView.setText("   " + childEvent.getTime() + "    " + childEvent.getTitle());
 			return textView;
+		}
+		
+		@Override
+		public View getChildView(int groupPosition, int childPosition,
+				boolean isLastChild, View convertView, ViewGroup parent) {
+			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
+			String detail = (String) getChild(groupPosition, childPosition);
+			textView.setText("      " + detail);
+			return textView;
+
 		}
 		@Override
 		public boolean hasStableIds() {
@@ -158,78 +253,17 @@ public class ScheduleSectionFragment extends Fragment{
 		}
 	}
 	
-	
-	public class ScheduleSubListAdapter extends BaseExpandableListAdapter{
-		private ArrayList<String> dates;
-		
-		//private Map<String, ArrayList<Event>> mapEvents;
+	class YourCustomExpandableListView extends ExpandableListView { 
+	    public YourCustomExpandableListView (Context context) {
+	       super(context);     
+	    }
 
-		private ArrayList<ArrayList<Event>> eventsPerDate;
-		
-		public ScheduleSubListAdapter(Schedule schedule){
-			dates = schedule.getScheduleDates();
-			//mapEvents = schedule.getMapDateEvents();
-			eventsPerDate = schedule.getArrayListEventsPerDate();
-		}
-
-		@Override
-		public Object getChild(int groupPosition, int childPosition) {
-			return eventsPerDate.get(groupPosition).get(childPosition);
-		}
-
-		@Override
-		public long getChildId(int groupPosition, int childPosition) {
-			return childPosition;
-		}
-
-		@Override
-		public int getChildrenCount(int groupPosition) {
-			return eventsPerDate.get(groupPosition).size();
-		}
-
-		@Override
-		public Object getGroup(int groupPosition) {
-			return dates.get(groupPosition);
-		}
-
-		@Override
-		public int getGroupCount() {
-			return dates.size();
-		}
-
-		@Override
-		public long getGroupId(int groupPosition) {
-			return groupPosition;
-		}
-
-		@Override
-		public View getGroupView(int groupPosition, boolean isExpanded,
-				View convertView, ViewGroup parent) {
-			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
-			textView.setText(getGroup(groupPosition).toString());
-			return textView;
-			
-			
-		}
-		
-		@Override
-		public View getChildView(int groupPosition, int childPosition,
-				boolean isLastChild, View convertView, ViewGroup parent) {
-			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
-//			Event childEvent = (Event) getChild(groupPosition,childPosition);
-//			textView.setText(childEvent.getTime() + "    " + childEvent.getTitle());
-			
-			
-			return textView;
-		}
-		@Override
-		public boolean hasStableIds() {
-			return true;
-		}
-
-		@Override
-		public boolean isChildSelectable(int groupPosition, int childPosition) {
-			return true;
-		}
+	    protected void onMeasure(int width, int height) {
+	        /*
+	         * Adjust height
+	         */
+	        height = MeasureSpec.makeMeasureSpec(500, MeasureSpec.AT_MOST);
+	        super.onMeasure(width, height);
+	    }  
 	}
 }
