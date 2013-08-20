@@ -39,19 +39,19 @@ Wednesday Sept 4, 2013
 Welcome & Training Schedule
 Galileo
 Michael Lee
-Michael Lee, the Director of Engineering, walks you through the training schedule from a developer's perspective.
+Michael Lee, the Director of Engineering, is here to welcome you and walk you through the training schedule from a developer's perspective.
 Wednesday Sept 4, 2013
 2:00-2:30PM
-Introduction to Product & Innovation (PI) Group
+Introduction to the PI Group
 Galileo
 Michael Lee
-Michael Lee, the Director of Engineering, explains what the PI group is and what we do.
+Michael Lee, the Director of Engineering, talks about the Product & Innovation group.
 Wednesday Sept 4, 2013
 2:45-4:15PM
 Increase Your Networking IQ
 Galileo
 Darriel Dawne
-Everyone tells you that you should network.  But how do you do it?  This session teaches you the fundamentals of networking.  
+Everyone tells you that you should network. But how? This session teaches you the fundamentals of networking. Darriel's session has been ranked as the #1 most helpful session in orientation.
 Thursday Sept 5, 2013
 11:00AM-1:00PM
 Optional (Dutch) Lunch: Have lunch & meet other coops/interns
@@ -71,29 +71,29 @@ Galileo
 Peter Tippett
 How do the different team members interact in a scrum?  How does it all work together?  Learn about it from Peter.
 Friday Sept 6, 2013
-2:30-3:00PMPM
+2:30-3:00PM
 How to Write Code
 Galileo
 David Simpson
-A high-level discussion on how SAP Vancouver develops code.
+A high-level discussion on how developers write code in SAP Vancouver.
 Friday Sept 6, 2013
 3:00-3:30PM
 Introduction to BI Portfolio Product Management
 Galileo
 Zach Hulbert
-Learn about product management: What it is and why we need it.
+Learn about product management and the software lifecycle: What it is and what they do.
 Monday Sept 9, 2013
 1:30-2:20PM
 Presentation by Recruiting
 Galileo
 Agnes Block
-Congratulations, you got into SAP!  Now what?
+University Recruiting is your HR point of contact and advice for future jobs and career paths.
 Monday Sept 9, 2013
 2:30-3:30PM
 Value Engineer for Sales / Whiteboard Session - What SAP Sells
 Galileo
 Shane Finlay
-Learn how value engineering helps our customers run better.
+Learn how value engineers demonstrate the value of SAP software to customers.
 Monday Sept 9, 2013
 3:45-4:30PM
 Presentation by Vancouver Intern Committee
@@ -117,7 +117,7 @@ Wednesday Sept 11, 2013
 User Experience & Accessibility
 Galileo
 Ed Prinsen & Zach Hulbert
-Find out what SAP is working on with UX & accessible user interfaces.
+Zach offers his insights on UX & accessible user interfaces.
 Wednesday Sept 11, 2013
 2:45-3:45PM
 Presentation by Community & Green Teams
@@ -141,13 +141,13 @@ Friday Sept 13, 2013
 Introduction to JIRA
 Galileo
 Kevin Huang
-SAP uses JIRA Issue & Bug Tracker to plan, track, and work smarter and faster.
+JIRA Issue & Bug Tracker lets developers plan, track, and work smarter and faster.
 Friday Sept 13, 2013
 2:30-3:30PM
 Introduction to Perforce
 Galileo
 Richard Yu & Margaret Chan
-Perforce is the main version control software used in SAP. Get a brief introduction to how to use it!
+Perforce is the main version control software used at SAP. Get a brief introduction to how to use it!
 Tuesday Sept 17, 2013
 1:30-2:00PM
 Presentation by Wellness Team
@@ -159,4 +159,4 @@ Tuesday Sept 17, 2013
 Executive Briefing Center (EBC) Tour
 Galileo
 Rachel Floyd
-The EBC in Vancouver is one of eight in the world that is dedicated to articulating value and inspiring innovation for SAP's customers and partners. 
+The EBC in Vancouver is dedicated to articulating value and inspiring innovation for SAP's customers and partners. 

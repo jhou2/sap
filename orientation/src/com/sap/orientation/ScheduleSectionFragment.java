@@ -23,82 +23,82 @@ import android.widget.ExpandableListView;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
 
-public class ScheduleSectionFragment extends Fragment{
-	   
-	Schedule schedule;
-	   ArrayList<Event> events;
-	   private ExpandableListAdapter expListAdapter;
-	   
-	   public static final String ARG_SECTION_NUMBER = "section_number";
-	
-	   public ScheduleSectionFragment(){
-	
-	   }
-	
-	
-	@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    
+public class ScheduleSectionFragment extends Fragment {
 
-     // Grab schedule data
-        
-        AssetManager assetMgr = getActivity().getAssets();
-    	InputStream file;
-		
-    	try {
+	Schedule schedule;
+	ArrayList<Event> events;
+	private ExpandableListAdapter expListAdapter;
+
+	public static final String ARG_SECTION_NUMBER = "section_number";
+
+	public ScheduleSectionFragment() {
+
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		// Grab schedule data
+
+		AssetManager assetMgr = getActivity().getAssets();
+		InputStream file;
+
+		try {
 			file = assetMgr.open("schedule.txt");
 			schedule = new Schedule();
 			schedule.populateSchedule(file); // Returns an arraylist of Events
-			
+
 			events = schedule.getSchedule();
-			
+
 			Event firstEvent = events.get(25);
-      
+
 			System.out.println(firstEvent.date);
 			System.out.println(firstEvent.time);
 			System.out.println(firstEvent.title);
 			System.out.println(firstEvent.room);
 			System.out.println(firstEvent.presenters);
 			System.out.println(firstEvent.descr);
-			
+
 			file.close();
-    	
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	
-    	expListAdapter = new ScheduleListAdapter(schedule);
-//    	expListAdapter = new ScheduleSubListAdapter(events.get(25));
+
+		expListAdapter = new ScheduleListAdapter(schedule);
+		// expListAdapter = new ScheduleSubListAdapter(events.get(25));
 	}
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_schedule, container, false);
-        ExpandableListView expandListView = (ExpandableListView) rootView.findViewById(R.id.schedule_expandable);
-        expandListView.setAdapter(expListAdapter);        
-        return rootView;
-    }
-	
-	
+			Bundle savedInstanceState) {
+		View rootView = inflater.inflate(R.layout.fragment_schedule, container,
+				false);
+		ExpandableListView expandListView = (ExpandableListView) rootView
+				.findViewById(R.id.schedule_expandable);
+		expandListView.setAdapter(expListAdapter);
+		return rootView;
+	}
+
 	/**
-	 *  An expandable list adapter that has the dates as the group views, and Events as the children
-	 * @author I837203
-	 * Feed in a schedule, that will contain a list of events
+	 * An expandable list adapter that has the dates as the group views, and
+	 * Events as the children
+	 * 
+	 * @author I837203 Feed in a schedule, that will contain a list of events
 	 */
-	
-	public class ScheduleListAdapter extends BaseExpandableListAdapter{
+
+	public class ScheduleListAdapter extends BaseExpandableListAdapter {
 		private ArrayList<String> dates;
-		
-		//private Map<String, ArrayList<Event>> mapEvents;
+
+		// private Map<String, ArrayList<Event>> mapEvents;
 
 		private ArrayList<ArrayList<Event>> eventsPerDate;
-		
-		public ScheduleListAdapter(Schedule schedule){
+
+		public ScheduleListAdapter(Schedule schedule) {
 			dates = schedule.getScheduleDates();
-			//mapEvents = schedule.getMapDateEvents();
+			// mapEvents = schedule.getMapDateEvents();
 			eventsPerDate = schedule.getArrayListEventsPerDate();
 		}
 
@@ -135,28 +135,33 @@ public class ScheduleSectionFragment extends Fragment{
 		@Override
 		public View getGroupView(int groupPosition, boolean isExpanded,
 				View convertView, ViewGroup parent) {
-			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
-			textView.setText(getGroup(groupPosition).toString());
+			TextView textView = new TextView(
+					ScheduleSectionFragment.this.getActivity());
+			textView.setText("        " + getGroup(groupPosition).toString());
 			return textView;
-			
-			
+
 		}
-		
+
 		@Override
 		public View getChildView(int groupPosition, int childPosition,
 				boolean isLastChild, View convertView, ViewGroup parent) {
-//			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
-//			Event childEvent = (Event) getChild(groupPosition,childPosition);
-//			textView.setText(childEvent.getTime() + "    " + childEvent.getTitle());
-//			return textView;
-			
-			Event childEvent = (Event) getChild(groupPosition,childPosition);
-			
-			ExpandableListView childView = new YourCustomExpandableListView(ScheduleSectionFragment.this.getActivity());
-			ExpandableListAdapter childViewAdapter = new ScheduleSubListAdapter(childEvent);
-			childView.setAdapter(childViewAdapter); 
-			return childView;			
+			// TextView textView = new
+			// TextView(ScheduleSectionFragment.this.getActivity());
+			// Event childEvent = (Event) getChild(groupPosition,childPosition);
+			// textView.setText(childEvent.getTime() + "    " +
+			// childEvent.getTitle());
+			// return textView;
+
+			Event childEvent = (Event) getChild(groupPosition, childPosition);
+
+			ExpandableListView childView = new YourCustomExpandableListView(
+					ScheduleSectionFragment.this.getActivity());
+			ExpandableListAdapter childViewAdapter = new ScheduleSubListAdapter(
+					childEvent);
+			childView.setAdapter(childViewAdapter);
+			return childView;
 		}
+
 		@Override
 		public boolean hasStableIds() {
 			return true;
@@ -166,32 +171,33 @@ public class ScheduleSectionFragment extends Fragment{
 		public boolean isChildSelectable(int groupPosition, int childPosition) {
 			return true;
 		}
-				
+
 	}
-	
+
 	/**
-	
-	 * ExpandableListAdapter for each event, that will expand out to have the individual descriptions
+	 * 
+	 * ExpandableListAdapter for each event, that will expand out to have the
+	 * individual descriptions
 	 * 
 	 * 
 	 * @author I837203
-	 *
+	 * 
 	 */
-	public class ScheduleSubListAdapter extends BaseExpandableListAdapter{
+	public class ScheduleSubListAdapter extends BaseExpandableListAdapter {
 		private ArrayList<Event> childEventArray;
-		
-		//private Map<String, ArrayList<Event>> mapEvents;
+
+		// private Map<String, ArrayList<Event>> mapEvents;
 
 		private ArrayList<String> childEventDetails;
-		
+
 		public ScheduleSubListAdapter(Event event) {
 			childEventArray = new ArrayList<Event>();
 			childEventArray.add(event);
-			
+
 			childEventDetails = new ArrayList<String>();
-			childEventDetails.add("Where: " + event.getRoom());
-			childEventDetails.add("Who: " + event.getPresenters());
-			childEventDetails.add("Desc: " + event.getDescription());
+			childEventDetails.add("Room: " + event.getRoom());
+			childEventDetails.add("Presenter(s): " + event.getPresenters());
+			childEventDetails.add(event.getDescription());
 		}
 
 		@Override
@@ -227,21 +233,25 @@ public class ScheduleSectionFragment extends Fragment{
 		@Override
 		public View getGroupView(int groupPosition, boolean isExpanded,
 				View convertView, ViewGroup parent) {
-			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
+			TextView textView = new TextView(
+					ScheduleSectionFragment.this.getActivity());
 			Event childEvent = (Event) getGroup(groupPosition);
-			textView.setText("   " + childEvent.getTime() + "    " + childEvent.getTitle());
+			textView.setText("        " + childEvent.getTime() + "    "
+					+ childEvent.getTitle());
 			return textView;
 		}
-		
+
 		@Override
 		public View getChildView(int groupPosition, int childPosition,
 				boolean isLastChild, View convertView, ViewGroup parent) {
-			TextView textView = new TextView(ScheduleSectionFragment.this.getActivity());
+			TextView textView = new TextView(
+					ScheduleSectionFragment.this.getActivity());
 			String detail = (String) getChild(groupPosition, childPosition);
-			textView.setText("      " + detail);
+			textView.setText(detail);
 			return textView;
 
 		}
+
 		@Override
 		public boolean hasStableIds() {
 			return true;
@@ -252,18 +262,18 @@ public class ScheduleSectionFragment extends Fragment{
 			return true;
 		}
 	}
-	
-	class YourCustomExpandableListView extends ExpandableListView { 
-	    public YourCustomExpandableListView (Context context) {
-	       super(context);     
-	    }
 
-	    protected void onMeasure(int width, int height) {
-	        /*
-	         * Adjust height
-	         */
-	        height = MeasureSpec.makeMeasureSpec(500, MeasureSpec.AT_MOST);
-	        super.onMeasure(width, height);
-	    }  
+	class YourCustomExpandableListView extends ExpandableListView {
+		public YourCustomExpandableListView(Context context) {
+			super(context);
+		}
+
+		protected void onMeasure(int width, int height) {
+			/*
+			 * Adjust height
+			 */
+			height = MeasureSpec.makeMeasureSpec(500, MeasureSpec.AT_MOST);
+			super.onMeasure(width, height);
+		}
 	}
 }
