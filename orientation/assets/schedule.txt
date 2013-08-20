@@ -9,43 +9,43 @@ Tuesday Sept 3, 2013
 New Employee Welcome Session
 Galileo
 Agnes Garaba
-Welcome to SAP Vancouver!
+A brief introduction to SAP.
 Tuesday Sept 3, 2013
 11:00-11:30AM
 Presentation by Facilities
 Galileo
 Bonnie Potratz
-Security, housekeeping, maintenance all fall under Facilities.  What do you do if you forget your security pass?
+Forgot your badge?  Or need something repaired?  Any concerns or requests about the building?  Facilities (Security, Housekeeping, Maintenance) can help you.  
 Tuesday Sept 3, 2013
 11:30AM-12:00PM
 Coop IT Orientation
 Galileo
 Brian Clancy
-description
+What's your password?  Do you have a computer at your desk?  Want an extra monitor?  Or did your computer just die a horrible death.  This is an essential "Getting Started" orientation session.
 Tuesday Sept 3, 2013
 12:00-12:15PM
 Coop Pick-up by Managers
 Galileo
-N/A
-description
+Managers and Intern Committee
+Your manager or some of the interns will take you out for lunch.  
 Tuesday Sept 3, 2013
 1:30-2:00PM
 Vancouver Office Site Tour
 Galileo
 Sneha Nambiar, Rajdeep Randhawa, Jaismin Parmar, Cindy Tang, Carrie Cheung, Ross Papa, Chelsea Lee
-Where's the closest kitchen? How do I get to the company gym? No need to panic! Learn the in's and out's of the office with tours led by interns who’ve had the same questions as you.
+Where's the closest kitchen? How do I get to the company gym? No need to panic! Learn the in's and out's of the office with tours led by interns.
 Wednesday Sept 4, 2013
 1:30-2:00PM
 Welcome & Training Schedule
 Galileo
-Michael Leetime
-description
+Michael Lee
+Michael Lee, the Director of Engineering, walks you through the training schedule from a developer's perspective.
 Wednesday Sept 4, 2013
 2:00-2:30PM
 Introduction to Product & Innovation (PI) Group
 Galileo
 Michael Lee
-The Director of Engineering in SAP Vancouver explains what the PI group is and what we do.
+Michael Lee, the Director of Engineering, explains what the PI group is and what we do.
 Wednesday Sept 4, 2013
 2:45-4:15PM
 Increase Your Networking IQ
@@ -63,7 +63,7 @@ Thursday Sept 5, 2013
 Testing Software
 Galileo
 Clint Sello
-How SAP tests software. Its more complicated than it looks.
+How SAP tests software. It's more complicated than it looks.
 Thursday Sept 5, 2013
 2:15-3:15PM
 How Do We Build Software?
