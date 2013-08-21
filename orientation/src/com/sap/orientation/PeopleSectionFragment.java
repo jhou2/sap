@@ -126,7 +126,7 @@ public class PeopleSectionFragment extends Fragment {
 			public View getGroupView(int groupPosition, boolean isExpanded,
 					View convertView, ViewGroup parent) {
 				TextView textView = new TextView(PeopleSectionFragment.this.getActivity());
-				textView.setText(getGroup(groupPosition).toString());
+				textView.setText("         " + getGroup(groupPosition).toString());
 				return textView;
 				
 				
