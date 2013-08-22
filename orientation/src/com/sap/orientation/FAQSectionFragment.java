@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -71,6 +72,10 @@ public class FAQSectionFragment extends Fragment {
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_faq, container, false);
         ExpandableListView expandListView = (ExpandableListView) rootView.findViewById(R.id.faq_expandable);
+        
+        int width = expandListView.getWidth();
+		expandListView.setIndicatorBounds(650,700);
+		
         expandListView.setAdapter(expListAdapter);        
         
         return rootView;
@@ -124,7 +129,10 @@ public class FAQSectionFragment extends Fragment {
 			public View getGroupView(int groupPosition, boolean isExpanded,
 					View convertView, ViewGroup parent) {
 				TextView textView = new TextView(FAQSectionFragment.this.getActivity());
-				textView.setText("         " + getGroup(groupPosition).toString());
+				textView.setText(getGroup(groupPosition).toString());
+				textView.setPadding(5, 16, 5, 16);
+				textView.setBackgroundColor(FAQSectionFragment.this.getActivity().getResources().getColor(R.color.SAP_GOLD));
+				textView.setTextColor(Color.WHITE);
 				return textView;
 				
 				
@@ -136,6 +144,7 @@ public class FAQSectionFragment extends Fragment {
 				TextView textView = new TextView(FAQSectionFragment.this.getActivity());
 				String childEvent = (String) getChild(groupPosition,childPosition);
 				textView.setText(childEvent);
+				textView.setPadding(36, 10, 0, 10);
 				
 				return textView;
 			}

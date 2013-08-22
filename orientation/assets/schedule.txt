@@ -9,7 +9,7 @@ Tuesday Sept 3, 2013
 New Employee Welcome Session
 Galileo
 Agnes Garaba
-A brief introduction to SAP.
+A brief introduction to SAP covering a brief history and our current product portfolio.
 Tuesday Sept 3, 2013
 11:00-11:30AM
 Presentation by Facilities
@@ -21,7 +21,7 @@ Tuesday Sept 3, 2013
 Coop IT Orientation
 Galileo
 Brian Clancy
-What's your password?  Do you have a computer at your desk?  Want an extra monitor?  Or did your computer just die a horrible death.  This is an essential "Getting Started" orientation session.
+What's your password? Do you have a computer at your desk? How do you get set up on your first day? This is an essential "getting started" orientation session.
 Tuesday Sept 3, 2013
 12:00-12:15PM
 Coop Pick-up by Managers
@@ -45,7 +45,7 @@ Wednesday Sept 4, 2013
 Introduction to the PI Group
 Galileo
 Michael Lee
-Michael Lee, the Director of Engineering, talks about the Product & Innovation group.
+Michael Lee, the Director of Engineering, talks about the Products & Innovation group. What is the PI group? What do we do? What are our goals?
 Wednesday Sept 4, 2013
 2:45-4:15PM
 Increase Your Networking IQ
@@ -69,7 +69,7 @@ Thursday Sept 5, 2013
 How Do We Build Software?
 Galileo
 Peter Tippett
-How do the different team members interact in a scrum?  How does it all work together?  Learn about it from Peter.
+How do all our processes work together?  How do the different team members interact in a scrum?  Learn about it from the Scrum Master himself, Peter.
 Friday Sept 6, 2013
 2:30-3:00PM
 How to Write Code
@@ -153,10 +153,10 @@ Tuesday Sept 17, 2013
 Presentation by Wellness Team
 Galileo
 Penny Stratas & Cathy Lund
-The Wellness Team promotes healthy lifestyles and activities in the workplace.
+The Wellness Team promotes healthy lifestyles and activities in the workplace. Learn about the resources that are available to you, and the ways that SAP facilitates your well-being.
 Tuesday Sept 17, 2013
 2:00-2:30PM
 Executive Briefing Center (EBC) Tour
 Galileo
 Rachel Floyd
-The EBC in Vancouver is dedicated to articulating value and inspiring innovation for SAP's customers and partners. 
+The EBC in Vancouver is dedicated to articulating value and inspiring innovation for SAP's customers and partners. Come have a look at our state-of-the-art facilities!

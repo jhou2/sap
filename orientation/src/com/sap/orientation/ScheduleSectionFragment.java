@@ -9,10 +9,14 @@ import java.util.Map.Entry;
 
 import com.sap.orientation.R;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -71,6 +75,7 @@ public class ScheduleSectionFragment extends Fragment {
 		// expListAdapter = new ScheduleSubListAdapter(events.get(25));
 	}
 
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -78,9 +83,17 @@ public class ScheduleSectionFragment extends Fragment {
 				false);
 		ExpandableListView expandListView = (ExpandableListView) rootView
 				.findViewById(R.id.schedule_expandable);
+		expandListView.setGroupIndicator(null);
+		//int width = expandListView.getWidth();
+		/*if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
+			expandListView.setIndicatorBounds(650,700);
+		} else {
+			expandListView.setIndicatorBoundsRelative(650,700);
+		} */
 		expandListView.setAdapter(expListAdapter);
 		return rootView;
 	}
+	
 
 	/**
 	 * An expandable list adapter that has the dates as the group views, and
@@ -137,7 +150,11 @@ public class ScheduleSectionFragment extends Fragment {
 				View convertView, ViewGroup parent) {
 			TextView textView = new TextView(
 					ScheduleSectionFragment.this.getActivity());
-			textView.setText("        " + getGroup(groupPosition).toString());
+			textView.setText(getGroup(groupPosition).toString());
+			textView.setPadding(5, 16, 5, 16);
+			textView.setBackgroundColor(ScheduleSectionFragment.this.getActivity().getResources().getColor(R.color.SAP_GOLD));
+			textView.setTextColor(Color.WHITE);
+//			textView.setTextColor(ScheduleSectionFragment.this.getActivity().getResources().getColor(R.color.SAP_GOLD));
 			return textView;
 
 		}
@@ -158,6 +175,8 @@ public class ScheduleSectionFragment extends Fragment {
 					ScheduleSectionFragment.this.getActivity());
 			ExpandableListAdapter childViewAdapter = new ScheduleSubListAdapter(
 					childEvent);
+			childView.setGroupIndicator(null);
+//			childView.setIndicatorBounds(625, 675);
 			childView.setAdapter(childViewAdapter);
 			return childView;
 		}
@@ -236,8 +255,9 @@ public class ScheduleSectionFragment extends Fragment {
 			TextView textView = new TextView(
 					ScheduleSectionFragment.this.getActivity());
 			Event childEvent = (Event) getGroup(groupPosition);
-			textView.setText("        " + childEvent.getTime() + "    "
+			textView.setText(childEvent.getTime() + "    "
 					+ childEvent.getTitle());
+			textView.setPadding(36, 10, 0, 10);
 			return textView;
 		}
 
@@ -248,6 +268,8 @@ public class ScheduleSectionFragment extends Fragment {
 					ScheduleSectionFragment.this.getActivity());
 			String detail = (String) getChild(groupPosition, childPosition);
 			textView.setText(detail);
+			textView.setPadding(72, 5, 0, 5);
+			textView.setTextColor(ScheduleSectionFragment.this.getActivity().getResources().getColor(R.color.SAP_DARKGREY));
 			return textView;
 
 		}

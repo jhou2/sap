@@ -3,39 +3,39 @@ University Recruiter, SAP HR Operations
 Agnes Garaba
 Human Resources Business Partner
 Bonnie Potratz
-Facilities
+Manager, Facilities
 Brian Clancy
-IT Support Consultant, SAP Vancouver
+IT Support Consultant
 Carrie Cheung
 Project Coordinator Intern, Global Technology Legal Compliance
 Cathy Lund
 Project Manager, TIP COO
 Chelsea Lee
-Project Management, Corporate Content Translation Service, SAP Language Services (GS) 
+Project Management Intern, Corporate Content Translation Service, SAP Language Services (GS) 
 Cho Wang
-Solution Management, Business Intelligence
+Solution Management Intern, Business Intelligence
 Cindy Tang
 Product Management Intern, Business Intelligence
 Clint Sello
 Software Test Manager, Install, BIP Deployment and Logistics
 Darriel Dawne
-Senior Director of Strategy & Transformation for Global Marketing at SAP. Darriel has a background in communication and her past experience also includes consulting and inside sales.
+Senior Director of Strategy & Transformation for Global Marketing at SAP.
 David Simpson
-Senior Software Developer
+Senior Software Developer, Business Intelligence
 Ed Prinsen
-User Experience, Business Intelligence
+Manager, User Experience, Business Intelligence
 Jaismin Parmar
 Project Management Intern, Install Managment Services, SAP Business Objects
 Justine Shan
-Global Technology Legal Compliance
+Manager, Global Technology Legal Compliance
 Kevin Huang
-TIP COO Development Operations Management
+PI COO Development Operations Management
 Margaret Chan
-Manager, TIP Core Production
+Manager, PI Core Production
 Michael Lee
 Director of Engineering, PI BIT COO
 Nazpar Yazdanfar
-BI Analytics Intern, TIP COO Dev Ops 
+BI Analytics Intern, PI COO Dev Ops 
 Niti Nielsen
 Inside Sales, Enterprise
 Peter Tippett
@@ -45,7 +45,7 @@ Executive Briefing Center Manager
 Rajdeep Randhawa
 Systems Administrator Intern, Infrastructure
 Richard Yu
-Systems Administrator, Install Team
+Systems Administrator, Build Team
 Rob Chee
 Intellectual Property Portfolio Development
 Ross Papa
