@@ -49,11 +49,11 @@ public class FAQSectionFragment extends Fragment {
 			questionMgr.populateQuestion(file); // Returns an arraylist of Question
 			
 			FAQ = questionMgr.getFAQ();
-			
-			for (Question p : FAQ){
-				System.out.println(p.question);
-				System.out.println(p.answer);
-			}
+//			
+//			for (Question p : FAQ){
+//				System.out.println(p.question);
+//				System.out.println(p.answer);
+//			}
 			
 			file.close();
     	
@@ -74,8 +74,12 @@ public class FAQSectionFragment extends Fragment {
         ExpandableListView expandListView = (ExpandableListView) rootView.findViewById(R.id.faq_expandable);
         
         int width = expandListView.getWidth();
-		expandListView.setIndicatorBounds(650,700);
-		
+        if(android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
+			expandListView.setIndicatorBounds(650,700);
+		} else {
+			//expandListView.setIndicatorBoundsRelative(650,700);
+			expandListView.setGroupIndicator(null);
+		} 		
         expandListView.setAdapter(expListAdapter);        
         
         return rootView;

@@ -52,10 +52,10 @@ public class PeopleSectionFragment extends Fragment {
 			
 			people = pplMger.getPeople();
 			
-			for (People p : people){
-				System.out.println(p.name);
-				System.out.println(p.bio);
-			}
+//			for (People p : people){
+//				System.out.println(p.name);
+//				System.out.println(p.bio);
+//			}
 			
 			file.close();
     	
@@ -76,8 +76,12 @@ public class PeopleSectionFragment extends Fragment {
         ExpandableListView expandListView = (ExpandableListView) rootView.findViewById(R.id.people_expandable);
         
         int width = expandListView.getWidth();
-		expandListView.setIndicatorBounds(650,700);
-		
+        if(android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
+			expandListView.setIndicatorBounds(650,700);
+		} else {
+			//expandListView.setIndicatorBoundsRelative(650,700);
+			expandListView.setGroupIndicator(null);
+		} 		
         expandListView.setAdapter(expListAdapter);        
         
         return rootView;
