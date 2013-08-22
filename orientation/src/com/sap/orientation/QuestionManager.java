@@ -35,6 +35,8 @@ ArrayList<Question> allQuestions;
 				line = input.readLine(); // Reads the next line (question, if there is another question to read in the file)
 			} // End while
 			
+		input.close();	//close BufferedReader
+		
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

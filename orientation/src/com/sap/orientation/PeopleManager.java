@@ -35,6 +35,8 @@ ArrayList<People> allPeople;
 				line = input.readLine(); // Reads the next line (name, if there is another person to read in the file)
 			} // End while
 			
+			input.close(); //Close BufferedReader.
+			
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
