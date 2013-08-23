@@ -83,13 +83,13 @@ public class ScheduleSectionFragment extends Fragment {
 				false);
 		ExpandableListView expandListView = (ExpandableListView) rootView
 				.findViewById(R.id.schedule_expandable);
-		expandListView.setGroupIndicator(null);
-		//int width = expandListView.getWidth();
-		/*if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
-			expandListView.setIndicatorBounds(650,700);
+		//expandListView.setGroupIndicator(null);
+		int width = expandListView.getWidth();
+		if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
+			expandListView.setIndicatorBounds(width - 50,width);
 		} else {
-			expandListView.setIndicatorBoundsRelative(650,700);
-		} */
+			expandListView.setGroupIndicator(null);;
+		} 
 		expandListView.setAdapter(expListAdapter);
 		return rootView;
 	}
