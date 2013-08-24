@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import com.sap.orientation.ScheduleSectionFragment.ScheduleListAdapter;
 
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -51,10 +52,10 @@ public class PeopleSectionFragment extends Fragment {
 			
 			people = pplMger.getPeople();
 			
-			for (People p : people){
-				System.out.println(p.name);
-				System.out.println(p.bio);
-			}
+//			for (People p : people){
+//				System.out.println(p.name);
+//				System.out.println(p.bio);
+//			}
 			
 			file.close();
     	
@@ -73,6 +74,14 @@ public class PeopleSectionFragment extends Fragment {
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_people, container, false);
         ExpandableListView expandListView = (ExpandableListView) rootView.findViewById(R.id.people_expandable);
+        
+        int width = expandListView.getWidth();
+        if(android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
+			expandListView.setIndicatorBounds(650,700);
+		} else {
+			//expandListView.setIndicatorBoundsRelative(650,700);
+			expandListView.setGroupIndicator(null);
+		} 		
         expandListView.setAdapter(expListAdapter);        
         
         return rootView;
@@ -127,6 +136,9 @@ public class PeopleSectionFragment extends Fragment {
 					View convertView, ViewGroup parent) {
 				TextView textView = new TextView(PeopleSectionFragment.this.getActivity());
 				textView.setText(getGroup(groupPosition).toString());
+				textView.setPadding(5, 16, 5, 16);
+				textView.setBackgroundColor(PeopleSectionFragment.this.getActivity().getResources().getColor(R.color.SAP_GOLD));
+				textView.setTextColor(Color.WHITE);
 				return textView;
 				
 				
@@ -138,6 +150,7 @@ public class PeopleSectionFragment extends Fragment {
 				TextView textView = new TextView(PeopleSectionFragment.this.getActivity());
 				String childEvent = (String) getChild(groupPosition,childPosition);
 				textView.setText(childEvent);
+				textView.setPadding(36, 10, 0, 10);
 				
 				return textView;
 			}
