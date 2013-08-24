@@ -53,16 +53,16 @@ public class ScheduleSectionFragment extends Fragment {
 			schedule = new Schedule();
 			schedule.populateSchedule(file); // Returns an arraylist of Events
 
-			events = schedule.getSchedule();
-
-			Event firstEvent = events.get(25);
-
-			System.out.println(firstEvent.date);
-			System.out.println(firstEvent.time);
-			System.out.println(firstEvent.title);
-			System.out.println(firstEvent.room);
-			System.out.println(firstEvent.presenters);
-			System.out.println(firstEvent.descr);
+//			events = schedule.getSchedule();
+//
+//			Event firstEvent = events.get(25);
+//
+//			System.out.println(firstEvent.date);
+//			System.out.println(firstEvent.time);
+//			System.out.println(firstEvent.title);
+//			System.out.println(firstEvent.room);
+//			System.out.println(firstEvent.presenters);
+//			System.out.println(firstEvent.descr);
 
 			file.close();
 
@@ -72,7 +72,6 @@ public class ScheduleSectionFragment extends Fragment {
 		}
 
 		expListAdapter = new ScheduleListAdapter(schedule);
-		// expListAdapter = new ScheduleSubListAdapter(events.get(25));
 	}
 
 
@@ -85,12 +84,21 @@ public class ScheduleSectionFragment extends Fragment {
 				.findViewById(R.id.schedule_expandable);
 		//expandListView.setGroupIndicator(null);
 		int width = expandListView.getWidth();
+<<<<<<< HEAD
 		if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
 			expandListView.setIndicatorBounds(width - 50,width);
 		} else {
 			expandListView.setGroupIndicator(null);;
+=======
+		if(android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
+			expandListView.setIndicatorBounds(650,700);
+		} else {
+			//expandListView.setIndicatorBoundsRelative(650,700);
+			expandListView.setGroupIndicator(null);
+>>>>>>> 001f733d2d198a7c76ea63a089519e7115410192
 		} 
 		expandListView.setAdapter(expListAdapter);
+		width = expandListView.getWidth();;
 		return rootView;
 	}
 	
