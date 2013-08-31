@@ -84,15 +84,9 @@ public class ScheduleSectionFragment extends Fragment {
 			expandListView.setIndicatorBounds(width - 50, width);
 		} else {
 			expandListView.setGroupIndicator(null);
-			if (android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-				expandListView.setIndicatorBounds(650, 700);
-			} else {
-				// expandListView.setIndicatorBoundsRelative(650,700);
-				expandListView.setGroupIndicator(null);
-			}
-			expandListView.setAdapter(expListAdapter);
-			width = expandListView.getWidth();
 		}
+		
+		expandListView.setAdapter(expListAdapter);
 		return rootView;
 	}
 
