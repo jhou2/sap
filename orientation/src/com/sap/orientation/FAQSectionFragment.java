@@ -74,20 +74,20 @@ public class FAQSectionFragment extends Fragment {
         ExpandableListView expandListView = (ExpandableListView) rootView.findViewById(R.id.faq_expandable);
         
         int width = expandListView.getWidth();
-<<<<<<< HEAD
+
         if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
 			expandListView.setIndicatorBounds(width - 50,width);
 		} else {
 			expandListView.setGroupIndicator(null);;
 		} 
-=======
+
         if(android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
 			expandListView.setIndicatorBounds(650,700);
 		} else {
 			//expandListView.setIndicatorBoundsRelative(650,700);
 			expandListView.setGroupIndicator(null);
 		} 		
->>>>>>> 001f733d2d198a7c76ea63a089519e7115410192
+
         expandListView.setAdapter(expListAdapter);        
         
         return rootView;

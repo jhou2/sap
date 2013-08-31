@@ -1,13 +1,6 @@
 package com.sap.orientation;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import java.util.ArrayList;
 import java.util.Locale;
-
-import android.content.res.AssetManager;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -18,8 +11,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {

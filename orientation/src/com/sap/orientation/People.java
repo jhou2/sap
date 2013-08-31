@@ -1,7 +1,5 @@
 package com.sap.orientation;
 
-import java.util.ArrayList;
-
 public class People {
 
 	String name;

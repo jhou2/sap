@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-import com.sap.orientation.ScheduleSectionFragment.ScheduleListAdapter;
-
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -76,20 +74,20 @@ public class PeopleSectionFragment extends Fragment {
         ExpandableListView expandListView = (ExpandableListView) rootView.findViewById(R.id.people_expandable);
         
         int width = expandListView.getWidth();
-<<<<<<< HEAD
+
         if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
 			expandListView.setIndicatorBounds(width-50,width);
 		} else {
 			expandListView.setGroupIndicator(null);;
 		} 
-=======
+
         if(android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1){
 			expandListView.setIndicatorBounds(650,700);
 		} else {
 			//expandListView.setIndicatorBoundsRelative(650,700);
 			expandListView.setGroupIndicator(null);
 		} 		
->>>>>>> 001f733d2d198a7c76ea63a089519e7115410192
+
         expandListView.setAdapter(expListAdapter);        
         
         return rootView;

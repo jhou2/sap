@@ -9,13 +9,13 @@ Tuesday Sept 3, 2013
 New Employee Welcome Session
 Galileo
 Agnes Garaba
-A brief introduction to SAP covering a brief history and our current product portfolio.
+This HR session will cover information about the organization, culture, and details on how to make your experience at SAP successful and productive.
 Tuesday Sept 3, 2013
 11:00-11:30AM
 Presentation by Facilities
 Galileo
 Bonnie Potratz
-Forgot your badge?  Or need something repaired?  Any concerns or requests about the building?  Facilities (Security, Housekeeping, Maintenance) can help you.  
+Forgot your badge?  Or need something repaired?  An overview of Facilities; how to request assistance, Security overview, emergency procedures, food in the building, recycling procedures, and information on the quiet rooms, maternity room, conference rooms, fitness centre, parking and kitchens.
 Tuesday Sept 3, 2013
 11:30AM-12:00PM
 Coop IT Orientation
@@ -31,7 +31,7 @@ Your manager or some of the interns will take you out for lunch.
 Tuesday Sept 3, 2013
 1:30-2:00PM
 Vancouver Office Site Tour
-Galileo
+Lobby
 Sneha Nambiar, Rajdeep Randhawa, Jaismin Parmar, Cindy Tang, Carrie Cheung, Ross Papa, Chelsea Lee
 Where's the closest kitchen? How do I get to the company gym? No need to panic! Learn the in's and out's of the office with tours led by interns.
 Wednesday Sept 4, 2013
@@ -39,19 +39,19 @@ Wednesday Sept 4, 2013
 Welcome & Training Schedule
 Galileo
 Michael Lee
-Michael Lee, the Director of Engineering, is here to welcome you and walk you through the training schedule from a developer's perspective.
+Michael Lee, Senior Director of Engineering, is here to welcome you to SAP.  He will briefly talk about his career, and provide some guidance on having a successful coop/intern term.  He will then provide an overview of the training schedule.
 Wednesday Sept 4, 2013
 2:00-2:30PM
 Introduction to the PI Group
 Galileo
 Michael Lee
-Michael Lee, the Director of Engineering, talks about the Products & Innovation group. What is the PI group? What do we do? What are our goals?
+An overview of the P&I Engineering team, a brief history of the Vancouver lab, and the products we develop here.
 Wednesday Sept 4, 2013
 2:45-4:15PM
 Increase Your Networking IQ
 Galileo
 Darriel Dawne
-Everyone tells you that you should network. But how? This session teaches you the fundamentals of networking. Darriel's session has been ranked as the #1 most helpful session in orientation.
+Networking is key to developing professional connections and building enduring, mutually beneficial relationships.  This session will show you how to continually connect with new people, foster developing relationships and leverage your network.  Ultimately, it's not about whom you know, but who knows you! 
 Thursday Sept 5, 2013
 11:00AM-1:00PM
 Optional (Dutch) Lunch: Have lunch & meet other coops/interns
@@ -63,37 +63,43 @@ Thursday Sept 5, 2013
 Testing Software
 Galileo
 Clint Sello
-How SAP tests software. It's more complicated than it looks.
+Learn things about testing you were never taught in school!  Hear what it is that testers do all day!  Meet with someone who has logged over 1000 bugs!
 Thursday Sept 5, 2013
 2:15-3:15PM
 How Do We Build Software?
 Galileo
 Peter Tippett
-How do all our processes work together?  How do the different team members interact in a scrum?  Learn about it from the Scrum Master himself, Peter.
+Building software involves lots of roles and people. At SAP, we use Lean/Agile principles to drive our development process. This session covers Agile principles and some details of Scrum - a common form of Agile found at SAP. By the end of this session, you will know some terminology and have some idea of how your work fits into a software release.
+Friday Sept 6, 2013
+1:45-2:15PM
+Presentation by Wellness Team
+Galileo
+Cathy Lund
+Learn who is on your Wellness Committee and The Well Team. Hear about what they do, as well as the various Wellness events, facilities, and services on site at 910 Mainland.
 Friday Sept 6, 2013
 2:30-3:00PM
 How to Write Code
 Galileo
 David Simpson
-A high-level discussion on how developers write code in SAP Vancouver.
+The goal of software developers and testers is to produce high-quality software quickly. We look at the non-technical qualities that are necessary in order to achieve this goal.
 Friday Sept 6, 2013
 3:00-3:30PM
 Introduction to BI Portfolio Product Management
 Galileo
 Zach Hulbert
-Learn about product management and the software lifecycle: What it is and what they do.
+Learn about SAP's Business Intelligence products and how they come together as a portfolio.
 Monday Sept 9, 2013
 1:30-2:20PM
 Presentation by Recruiting
 Galileo
 Agnes Block
-University Recruiting is your HR point of contact and advice for future jobs and career paths.
+Equip yourself with answers to common questions you may have when starting work in a new environment. Join Agnes as she delves into HR-related topics from vacation and benefits to dress code.
 Monday Sept 9, 2013
 2:30-3:30PM
 Value Engineer for Sales / Whiteboard Session - What SAP Sells
 Galileo
-Shane Finlay
-Learn how value engineers demonstrate the value of SAP software to customers.
+Peter Buckley
+SAP has a full stack of solutions to offer but customers think about business outcomes not solutions. To use an analogy - a customer buys the hole, not the drill. SAP sells business outcomes. You've heard the phrase by now - "Run Better". Every solution that we build is to address a particular process or a set of processes. Together they help companies with their key performance indicators. Those KPIs are what gets measured and ultimately what shows performance. Join us for this alternative view on what SAP sells – from the customer's point of view.
 Monday Sept 9, 2013
 3:45-4:30PM
 Presentation by Vancouver Intern Committee
@@ -101,62 +107,56 @@ Galileo
 Jaismin Parmar, Carrie Cheung, Ross Papa, Chelsea Lee
 Learn what the Intern Committee is all about, and put your SAP knowledge to the test with a round of SAP-inspired Jeopardy!
 Tuesday Sept 10, 2013
+11:30-12:00PM
+Executive Briefing Center (EBC) Tour
+Lobby
+Rachel Floyd
+Every year the Vancouver Executive Briefing Center (EBC) welcomes hundreds of SAP customers and partners to engage with our SAP experts in sessions that inspire collaboration and innovation. This session will provide a guided tour of the facility and insight to the magic that happens during these SAP hosted events.
+Tuesday Sept 10, 2013
 1:30-2:30PM
 Product & Innovation (PI) Infrastructure
 Galileo
 Ryan Wong
-Need a HANA instance?  Or a VM?  Learn more about how the Infrastructure team can help you!
+Need a HANA instance?  Or a VM?  Development Infrastructure group's mission is to provide server environments for testing and development teams of the organization: Product & Innovation HANA Platform. Our missions are built around a strategy of "on-demand" resources for development based on environment creation of back-end servers and applications. There will be a tour of the Vancouver data centre as part of the session!
 Tuesday Sept 10, 2013
 2:45-3:45PM
-BI in Product & Innovation (PI)
+Visualization in Product & Innovation (PI)
 Galileo
-Nazpar Yazdanfar
-Learn how to use our own business intelligence and analytics software with the development of our own products!
+Jennifer Waldern
+This session will introduce the TIPBOE2 Business Intelligence tools that support the development cycle at SAP. TIPBOE2 is our internal deployment of the SAP BusinessObjects Platform that is hosted by the P&I Visualization team. Tools, such as Web Intelligence, Crystal Reports and Design Studio allows developers to gain greater insight into their daily work. The discussion will focus primarily on TIPBOE2's architecture, applications and purpose.
 Wednesday Sept 11, 2013
 1:30-2:30PM
 User Experience & Accessibility
 Galileo
-Ed Prinsen & Zach Hulbert
-Zach offers his insights on UX & accessible user interfaces.
+Ashley Gad & Zach Hulbert
+Learn about User Experience and how it relates to Design Thinking, as well as, find out what Accessibility is and why it is important to SAP and our Customers.
 Wednesday Sept 11, 2013
 2:45-3:45PM
 Presentation by Community & Green Teams
 Galileo
 Niti Nielsen
-SAP Vancouver is a leader in sustainability and green initiatives.  Learn more from Niti and join the Green Team!
+Come learn about the many groups here at SAP Vancouver and how to get involved (ie: Women's Network, FunWorks, Wellness, Toastmaster's and Volunteer opportunities). Hear about the Green team's initiatives: dumpster dives, bike to work week and how SAP Canada became recognized on Canada's "Green 30" list!
 Thursday Sept 12, 2013
 1:30-2:30PM
 Intellectual Property
 Galileo
-Rob Chee
-What is Intellectual Property and how does it affect your work at SAP?  Learn more about patents and how you can add value to SAP's IP!
+Chris Metcalfe
+Learn about the fundamentals of intellectual property with a focus on patent protection.
 Thursday Sept 12, 2013
 2:45-3:45PM
 Using 3rd Party Code
 Galileo
 Justine Shan
-Can you use open source code at SAP?  What are the different software licenses out there?  Learn about how Global Technology Legal Compliance can help you develop legally compliant products.
+SAP products and solutions embody open source components. Although open source is "free" to use, there are legal and technical compliance obligations that entail the usage. This session will give an overview of SAP corporate standards for open source and guidance to things of consideration when using open source during development.
 Friday Sept 13, 2013
 1:30-2:15PM
 Introduction to JIRA
 Galileo
 Kevin Huang
-JIRA Issue & Bug Tracker lets developers plan, track, and work smarter and faster.
+This session will introduce using Jira as backlog management tool for scrum teams. The presentation will cover some custom processes for managing backlog items, particularly the Defect issue type and its many customizations.
 Friday Sept 13, 2013
 2:30-3:30PM
 Introduction to Perforce
 Galileo
 Richard Yu & Margaret Chan
-Perforce is the main version control software used at SAP. Get a brief introduction to how to use it!
-Tuesday Sept 17, 2013
-1:30-2:00PM
-Presentation by Wellness Team
-Galileo
-Penny Stratas & Cathy Lund
-The Wellness Team promotes healthy lifestyles and activities in the workplace. Learn about the resources that are available to you, and the ways that SAP facilitates your well-being.
-Tuesday Sept 17, 2013
-2:00-2:30PM
-Executive Briefing Center (EBC) Tour
-Galileo
-Rachel Floyd
-The EBC in Vancouver is dedicated to articulating value and inspiring innovation for SAP's customers and partners. Come have a look at our state-of-the-art facilities!
+Learn how to request a Perforce account and set up your Perforce client (P4v). There will also be a quick demo on the Perforce repository and the features of Perforce client (P4v).
